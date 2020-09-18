@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'DOS';
+  src: url("Px437_IBM_EGA8.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-kerning: none;
+  font-kerning: none;
+  font-synthesis: none;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-variant-numeric: tabular-nums;
+}
+
+html {
+	font-family: 'DOS', monospace;
+	background-color: #000084;
+}
+
+body {
+	margin: 0;
+	font-size: 18px;
+	line-height: 20px;
+	color: #bbb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5em 0;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+a {
+	color: #bbb;
+	text-decoration: none;
+  background-color: transparent;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 16px;
+}
+
+@media (min-width: 400px) {
+	body {
+		font-size: 16px;
+	}
+}
