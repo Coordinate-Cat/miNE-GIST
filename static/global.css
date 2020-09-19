@@ -11,6 +11,11 @@
   font-variant-numeric: tabular-nums;
 }
 
+*::-webkit-scrollbar {
+	width: 10px;
+	background: #000000;
+}
+
 html {
 	font-family: 'DOS', monospace;
 	background-color: #000084;
@@ -24,17 +29,82 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
+	margin: 0 0 0.1em 0;
 	font-weight: 400;
 	line-height: 1.2;
 }
 
 h1 {
-	font-size: 2em;
+	background: #00aaaa;
+	text-indent: 8px;
+	padding: 14px 8px;
+}
+
+h1, h2 {
+	margin-bottom: 0;
+	margin-top: 14px;
+	font-weight: 400;
+	line-height: 14px;
+	color: #000000;
+}
+
+h2 {
+	color: #fff;
+	animation:blinkingText 1.2s infinite;
+	border: 0.875px solid #fff;
+	padding-top: 6.125px;
+	padding-bottom: 7px;
+	padding-left: 10.5px;
+	padding-right: 11.5px;
+	width: fit-content;
+}
+
+@keyframes blinkingText{
+  1%{ visibility: hidden;  }
+  49%{ visibility: hidden;  }
+  60%{ visibility: visible; }
+  99%{ visibility: visible;  }
+  100%{ visibility: hidden;  }
+}
+
+h3 {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 0.5em 0 0.3em 0;
+	-webkit-animation: jaggedScroll 3s infinite;
+	animation: jaggedScroll 3s infinite;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+	-webkit-animation-timing-function: steps(10, jump-both);
+	animation-timing-function: steps(10, jump-both);
+	white-space: nowrap;
+}
+
+@-webkit-keyframes jaggedScroll {
+	from {
+		margin-left: -8px;
+	}
+	to {
+		margin-left: 80px;
+	}
+}
+
+@keyframes jaggedScroll {
+	from {
+		margin-left: -8px;
+	}
+	to {
+		margin-left: 80px;
+	}
+}
+
+p {
+	margin: 0;
 }
 
 a {
-	color: #bbb;
+	color: #FFFF55;
 	text-decoration: none;
   background-color: transparent;
 }
