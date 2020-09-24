@@ -18,6 +18,7 @@ const posts = fs.readdirSync('./src/posts').map(postFilename => {
   const postFrontMatter = frontMatter(postContent);
   return {
     title: postFrontMatter.attributes.title,
+    date: postFrontMatter.attributes.date,
     slug: postFrontMatter.attributes.slug,
     html: marked(postFrontMatter.body)
   }

@@ -71,7 +71,7 @@
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">scaffolding</a></li>
+		<li><a rel=prefetch aria-current="{segment === 'posts' ? 'page' : undefined}" href="posts">Posts</a></li>
 		<li><a href="https://github.com/Coordinate-Cat" target=”_blank”>Github</a></li>
 	</ul>
 </nav>
